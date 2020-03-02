@@ -1,2 +1,10 @@
-test_app : src/main.c src/IntVector.c src/IntVector.h
-	gcc -g -Wall -I include -o test_app src/main.c src/IntVector.c src/IntVector.h
+all: test_app 
+
+src/%.o : src/%.c
+	gcc -Wall -c -o $@ $< 
+
+test_app : src/main.o src/IntVector.o
+	gcc -Wall -o test_app src/main.o src/IntVector.o
+
+clean:
+	rm -f test_app src/*.o
