@@ -1,7 +1,7 @@
 all: test_app 
 
 src/%.o : src/%.c
-	gcc -Wall -c -o $@ $< 
+	gcc -Wall -I include -c -o $@ $< 
 
 test_app : src/main.o src/IntVector.o
 	gcc -Wall -o test_app src/main.o src/IntVector.o

@@ -1,10 +1,10 @@
+#define CTEST_MAIN
+#define CTEST_SEGFAULT
+
 #include <stdio.h>
 #include <stdint.h>
 #include <ctest.h>
 #include "IntVector.h"
-
-#define CTEST_MAIN
-#define CTEST_SEGFAULT
 
 int main(int argc, char const *argv[])
 {
